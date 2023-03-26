@@ -33,7 +33,6 @@ const galleryImg = (listImg) =>
         <img src='${item.url}' alt='${item.alt}' ></img>
       </li>`
     );
-    console.log(galleryImgEL);
   });
 
 galleryImg(images);
