@@ -25,14 +25,15 @@ const images = [
 
 const galleryImgEL = document.querySelector(".gallery");
 
-const galleryImg = (listImg) =>
-  listImg.forEach((item) => {
-    galleryImgEL.insertAdjacentHTML(
-      "afterbegin",
-      `<li class='img-item'>
+const galleryImg = (listImg) => {
+  return listImg.map((item) => {
+    const imgs = `<li class='img-item'>
         <img src='${item.url}' alt='${item.alt}' ></img>
-      </li>`
-    );
-  });
+      </li>`;
 
-galleryImg(images);
+    return imgs;
+  });
+};
+
+const listImg = galleryImg(images);
+galleryImgEL.insertAdjacentHTML("afterbegin", listImg);

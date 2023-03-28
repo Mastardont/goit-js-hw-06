@@ -17,13 +17,15 @@ const ingredients = [
 
 const ingredientsEL = document.querySelector("#ingredients");
 
-const listIngredients = (list) =>
-  list.forEach((item) => {
-    const listItems = document.createElement("li");
-    listItems.classList.add("item");
-    listItems.textContent = `${item}`;
+const listIngredients = (list) => {
+  return list.map((item) => {
+    const listItemsEl = document.createElement("li");
+    listItemsEl.classList.add("item");
+    listItemsEl.textContent = `${item}`;
 
-    ingredientsEL.appendChild(listItems);
+    return listItemsEl;
   });
+};
 
-listIngredients(ingredients);
+const listItems = listIngredients(ingredients);
+ingredientsEL.append(...listItems);
