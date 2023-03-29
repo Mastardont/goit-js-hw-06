@@ -21,7 +21,7 @@ const listIngredients = (list) => {
   return list.map((item) => {
     const listItemsEl = document.createElement("li");
     listItemsEl.classList.add("item");
-    listItemsEl.textContent = `${item}`;
+    listItemsEl.textContent = item;
 
     return listItemsEl;
   });

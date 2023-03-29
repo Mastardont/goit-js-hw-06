@@ -28,7 +28,7 @@ const galleryImgEL = document.querySelector(".gallery");
 const galleryImg = (listImg) => {
   return listImg.map((item) => {
     const imgs = `<li class='img-item'>
-        <img src='${item.url}' alt='${item.alt}' ></img>
+        <img src='${item.url}' alt='${item.alt}' />
       </li>`;
 
     return imgs;
